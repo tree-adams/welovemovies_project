@@ -3,7 +3,7 @@ const path = require("path");
 require("dotenv").config();
 
 const {
-  DATABASE_URL = "postgresql://postgres@localhost/postgres",
+  DATABASE_URL = `postgresql:${proccess.env.USERNAME}:${process.env.password}/@localhost:5432/postgres`,
 } = process.env;
 
 module.exports = {
@@ -21,8 +21,6 @@ module.exports = {
 
   production: {
     client: "postgresql",
-    username: process.env.USERNAME,
-    password: process.env.PASSWORD,
     connection: DATABASE_URL,
     pool: { min: 0, max: 5 },
     migrations: {
