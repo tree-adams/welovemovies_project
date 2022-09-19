@@ -9,7 +9,7 @@ exports.seed = function (knex) {
       zip: "98660",
     },
     {
-      name: "Hollywood Theater",
+      name: "Hollywood Theatre",
       address_line_1: "4122 NE Sandy Blvd.",
       address_line_2: "",
       city: "Portland",
